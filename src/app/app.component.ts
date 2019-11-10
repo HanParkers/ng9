@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   template: `
-    <p>{{ title }}</p>
+      <p>Some clean app</p>
   `
 })
 export class AppComponent {
-  title = 'ng9';
 }
