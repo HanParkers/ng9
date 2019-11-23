@@ -1,11 +1,11 @@
-import angularOptimizer from 'rollup-plugin-angular-optimizer';
-import nodeResolve from 'rollup-plugin-node-resolve';
 import paths from 'rollup-plugin-paths';
 import pathMapping from 'rxjs/_esm5/path-mapping';
+import nodeResolve from 'rollup-plugin-node-resolve';
+import angularOptimizer from './rollup-plugin-angular-optimizer';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
-  input: `./dist/out-tsc/src/app.component.js`,
+  input: `./dist/out-tsc/app.component.js`,
   output: {
     name: 'hw',
     file: `dist/ivy/bundle.js`,
@@ -17,7 +17,7 @@ export default {
     nodeResolve({
       mainFields: ['module', 'main', 'jsnext:main']
     }),
-    angularOptimizer(),// fixme PROBLEM WITH THIS OLD PLUGIN
+    angularOptimizer(),
     uglify.uglify({
       mangle: true,
       compress: {

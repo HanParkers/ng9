@@ -4,9 +4,15 @@
   "scripts": {
     "build": "ngc",
     "bundle": "rollup -c rollup.config.js",
-    "serve": "http-server public",
+    "serve": "http-server dist",
     "start": "npm run build && npm run bundle && npm run serve"
   },
+  "browserslist": [
+    "last 3 version",
+    "> 1%",
+    "IE 10"
+  ],
+  "babelrc": false,
   "private": true,
   "dependencies": {
     "@angular-devkit/build-optimizer": "^0.803.19",
