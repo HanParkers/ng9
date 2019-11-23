@@ -4,6 +4,7 @@
   "scripts": {
     "build": "ngc",
     "bundle": "rollup -c rollup.config.js",
+    "gzip": "cat dist/ivy/bundle.js | gzip > dist/bundle.js.gz",
     "serve": "http-server dist",
     "start": "npm run build && npm run bundle && npm run serve"
   },

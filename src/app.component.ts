@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ɵComponentType as ComponentType, ɵrenderComponent as renderComponent,} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -11,3 +11,5 @@ export class AppComponent {
   title = 'ng9';
 
 }
+
+renderComponent(AppComponent as ComponentType<AppComponent>);
